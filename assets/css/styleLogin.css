@@ -1,0 +1,78 @@
+@font-face{
+    font-family:"Helvetica";
+    src:url('../font/Helvetica.ttf');
+}
+@font-face{
+    font-family:"Helvetica Bold";
+    src:url('../font/Helvetica-Bold.ttf');
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 1320px;
+}
+.logo-header {
+    width: 70px;
+    margin-top: 70px;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+}
+h1 {
+    font-family: Helvetica Bold;
+    font-size: 24px;
+    margin-top: 30px;
+}
+h4 {
+    font-family: Helvetica;
+    font-size: 15px;
+    margin-top: 15px;   
+}
+label {
+    font-family: Helvetica;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+label a {
+    color: #999999;
+    text-decoration: underline;
+}
+label a:hover {
+    color: black;
+}
+.btn {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.btn-fb {
+    background-color: #4c66a4 !important;
+    color: white;
+}
+.btn-fb:hover {
+    background-color: #3C5081 !important;
+    color: white;
+}
+span {
+    font-family: Helvetica;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+span a {
+    color: #999999;
+    text-decoration: underline;
+}
+span a:hover {
+    color: black;
+}
+/* .form-control:active {
+    background-color: black !important;
+} */
+/* .flashdata {
+    background-color: #E36447!important; 
+    margin: 10px;
+} */
