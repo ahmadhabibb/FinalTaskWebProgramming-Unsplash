@@ -14,9 +14,9 @@
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
 </head>
 <body>
-    <div class="container-fluid fixed-top">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12" style="display: -webkit-inline-box; margin-top: 10px">
+            <div class="col-md-12 fixed-top" style="display: -webkit-inline-box; padding-top: 10px; background-color: white;">
                     <img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/>
                 <div class="col-lg-8">
                     <input type="text" placeholder="Search free high-resolution photos" class="form-control" name="search"
@@ -54,10 +54,10 @@
                     <a href="#"><img src="<?php echo base_url(); ?>/assets/img/avatar-account.jpg" style="border-radius:25px; margin-left:10px;"></a>
                 </div>
             </div>
-            <div class="col-sm-4 text-right" style="margin-top: 100px;">
+            <div class="col-sm-4 text-right" style="margin-top:200px;">
                 <img src="<?php echo base_url(); ?>/assets/img/avatar-account-lg.jpg" style="border-radius:100px; margin-left:10px;">
             </div>
-            <div class="col-sm-8" style="margin-top: 100px;">
+            <div class="col-sm-8" style="margin-top: 200px;">
                 <div class="col-sm-6" style="display: -webkit-inline-box">
                     <h1 style=" font-weight:700;
                                 font-family: Helvetica;">
@@ -76,6 +76,37 @@
                                     Download free, beautiful high-quality photos curated by <?php echo $user['first_name'] ?></span>
                 </div>
             </div>
+        </div>
+        <div class="row" style="margin-top: 100px">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 col-md-10">
+                <h3 style="
+                    font-family: Helvetica;
+                    font-size: 17px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                    margin-left: 25px;">
+                    <?php echo count($dataPhoto); ?> Photos</h3>
+                
+                    <div class="col-md-12">
+                        <?php foreach($dataPhoto as $photo) { ?>
+                            <img src="<?php echo base_url('assets/photoUser/') . $photo['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;">
+                        <?php } ?>
+                    </div>
+                
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="col-md-12 text-center" style="margin-top: 100px;">
+            <img src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo footer">
+            <h4 style="
+                    font-family: Helvetica;
+                    font-size: 15px;
+                    font-weight: 300;
+                    margin-top: 20px;
+                    color: #969696;
+                    margin-bottom: 100px;">
+                    Make something awesome</h4>
         </div>
     </div>
 

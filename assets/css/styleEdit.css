@@ -174,7 +174,41 @@
     font-family: Helvetica;
     font-size: 15px;
 }
-h3 {
+#container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 1320px;
+}
+#menu {
+    list-style-type: none;
+}
+#menu h4 {
+    margin-bottom: 30px;
+    font-size: 18px;
     font-family: Helvetica;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+#menu li {
+    padding-bottom: 15px;
+}
+#menu .active a {
+    text-decoration: none;
+    text-transform: none;
+    color: black;   
     font-size: 15px;
+    font-family: Helvetica;
+    font-weight: 400; 
+}
+#menu li a{
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 15px;
+    text-decoration: underline;
+}
+#menu li a:hover {
+    color: black;
+    transition: 0.5s;
 }

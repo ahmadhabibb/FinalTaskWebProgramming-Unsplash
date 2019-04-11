@@ -21,7 +21,11 @@
 		    return $this->db->get('user')->row_array();
         }
         public function getAllPhotos() {
-            return $this->db->get('photo');
+            return $this->db->get('photo')->result_array();
+        }
+        public function getPhotoByName($first_name) {
+            $this->db->where('first_name', $first_name);
+            return $this->db->get('photo')->result_array();
         }
         public function uploadPhoto($id, $file_name) {
             $this->db->where('id', $id);
