@@ -51,18 +51,22 @@
                 <div class="col-lg-2" style="display: inline;">
                     <button style="margin-left:10px;" class="submitPhoto btn btn-light" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Submit a Photo</button>
                     <button style="margin-left:10px;" class="fas fa-bell btn" style="color: #ADADAD;"></button>
-                    <a href="#"><img src="<?php echo base_url(); ?>/assets/img/avatar-account.jpg" style="border-radius:25px; margin-left:10px;"></a>
+                    <?php foreach($userPhoto as $photo) { ?>
+                        <a href="#"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="40px" style="border-radius:25px;"></a>
+                    <?php } ?>
                 </div>
             </div>
             <div class="col-sm-4 text-right" style="margin-top:200px;">
-                <img src="<?php echo base_url(); ?>/assets/img/avatar-account-lg.jpg" style="border-radius:100px; margin-left:10px;">
+            <?php foreach($userPhoto as $photo) { ?>
+                <img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="170px" style="border-radius:100px; margin-left:10px;">
+            <?php } ?>
             </div>
             <div class="col-sm-8" style="margin-top: 200px;">
                 <div class="col-sm-6" style="display: -webkit-inline-box">
                     <h1 style=" font-weight:700;
                                 font-family: Helvetica;">
                                 <?php echo $user['first_name'] ?> <?php echo $user['last_name']; ?></h1>
-                    <a href="<?php echo base_url();?>account/edit" style="margin-left:40px; margin-top:10px;" class="editProfile btn btn-light">Edit Profile</a>
+                    <a href="<?php echo base_url();?>edit" style="margin-left:40px; margin-top:10px;" class="editProfile btn btn-light">Edit Profile</a>
                     <button class="fas fa-ellipsis-h btn btn-light" type="button" data-toggle="dropdown" style="margin-left:10px; padding:10px; margin-top:10px;"></button>
                     <ul class="dropdown-menu" style="background-color: black;">
                         <li><a href="#">Account Setting</a></li>

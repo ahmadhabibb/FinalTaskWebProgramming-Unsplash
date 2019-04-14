@@ -246,3 +246,15 @@
     color: black;
     text-decoration: none;
 }
+.upload {
+    /* padding-bottom: 150px; */
+}
+label {
+    color: black;
+}
+label :hover{
+    text-decoration: underline;
+}
+#file_input_id{
+    display:none;
+}

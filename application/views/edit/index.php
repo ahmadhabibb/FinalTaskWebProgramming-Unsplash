@@ -52,7 +52,9 @@
                 <div class="col-lg-2" style="display: inline;">
                     <button style="margin-left:10px;" class="submitPhoto btn btn-light" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Submit a Photo</button>
                     <button style="margin-left:10px;" class="fas fa-bell btn" style="color: #ADADAD;"></button>
-                    <a href="#"><img src="<?php echo base_url(); ?>/assets/img/avatar-account.jpg" style="border-radius:25px; margin-left:10px;"></a>
+                    <?php foreach($dataPhoto as $photo) { ?>
+                        <a href="<?php echo base_url();?>account"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="40px" style="border-radius:25px;"></a>
+                    <?php } ?>
                 </div>
             </div>
             
@@ -75,19 +77,24 @@
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-9" id="menu" style="margin-top: 100px;">
                     <h4>Edit Profile</h4>
-                    <div class="form">
-                        <form class="edit_user" id="edit_user_2590255" action="/account" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="3KIY999SGvZz6haih6yMRym0whQXsMLW7bzkBjockSlsjty2NDbySnMiqdNZJMCjSfq0UE1EFXMHenpcaJhq9A==" />
+                    <div class="form" style="font-family: Helvetica; font-size: 15px;">
+                        <?php echo form_open_multipart('edit/editProfile'); ?>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4 text-center">
-                                    <a href="#" class="upload-circular-container profile-image-container js-general-uploader-pseudo-file-field">
                                     <div class="upload-circular">
-                                        <img src="<?php echo base_url(); ?>assets/img/avatar-account-lg.jpg" style="border-radius:100px;"/>
+                                        <?php foreach($dataPhoto as $photo) { ?>
+                                            <a href=""><label style="cursor: pointer;" for="file_input_id"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="200px" style="border-radius:100px;"/></label></a>
+                                        <?php } ?>
                                         <div class="upload-circular__progress js-general-uploader-progress-target">
+                                            <input type="file" multiple="" accept="image/jpeg" id="file_input_id" name="photoProfile"/>
+                                            <a href="#"><label style="  cursor: pointer; 
+                                                                        font-size: 13px;
+                                                                        color: #ADADAD;
+                                                                        text-decoration: underline;" for="file_input_id">Change profile image</label></a> 
                                         </div> <!-- close .__progress -->
                                     </div> <!-- close .upload-circular -->
 
-                                    <p class="text-center zeta js-edit-profile-image-trigger-text">Change profile image</p>
-                                    </a> <!-- close .js -->
+                                    <!-- </a> close .js -->
 
                                     <div class="user-badges text-left">
                                         <label>Badge</label>
@@ -104,17 +111,17 @@
                                 <div class="col-xs-12 col-sm-8">
                                     <div class="form-group">
                                         <label for="user_first_name">First name</label>
-                                        <input class="form-control" type="text" value="Ahmad Habib" name="user[first_name]" id="user_first_name" />
+                                        <input class="form-control" type="text" value="<?php echo $user['first_name'] ?>" name="first_name" id="user_first_name" />
                                     </div> <!-- close .form-group -->
 
                                     <div class="form-group">
                                         <label for="user_last_name">Last name</label>
-                                        <input class="form-control" type="text" value="Fitriansyah" name="user[last_name]" id="user_last_name" />
+                                        <input class="form-control" type="text" value="<?php echo $user['last_name'] ?>" name="last_name" id="user_last_name" />
                                     </div> <!-- close .form-group -->
 
                                     <div class="form-group">
                                         <label for="user_email">Email address</label>
-                                        <input class="form-control" type="email" value="id.ahmadhabib@gmail.com" name="user[email]" id="user_email" />
+                                        <input class="form-control" type="email" value="<?php echo $user['email'] ?>" name="email" id="user_email" readonly />
                                     </div> <!-- close .form-group -->
                                 </div> <!-- close .col -->
                             </div> <!-- close .row -->
@@ -125,16 +132,16 @@
                                         <label for="user_username">
                                             Username <span class="text-secondary">(only letters, numbers, and underscores)</span>
                                         </label>
-                                        <input class="form-control" type="text" value="ahmadhabib" name="user[username]" id="user_username" />
+                                        <input class="form-control" type="text" value="<?php echo $user['username'] ?>" name="username" id="user_username" readonly />
                                         <div class="help-block text-secondary">
-                                            <p>https://unsplash.com/@<strong>ahmadhabib</strong></p>
+                                            <p>https://unsplash.com/@<strong><?php echo $user['username'] ?></strong></p>
                                         </div> <!-- close .help-block -->
                                     </div> <!-- close .form-group -->
                                 </div> <!-- close .col -->
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="form-group">
                                         <label for="user_url">Personal site/portfolio</label>
-                                        <input class="form-control" placeholder="https://" type="text" name="user[url]" id="user_url" />
+                                        <input class="form-control" value="<?php echo $user['site'] ?>" type="text" name="site" id="user_url" />
                                     </div> <!-- close .form-group -->
                                 </div> <!-- close .col -->
 
@@ -142,7 +149,7 @@
                                     <div class="form-group">
                                         <label for="user_location">Location</label>
                                         <div class="input-group">
-                                            <input class="form-control" type="text" name="user[location]" id="user_location" />
+                                            <input class="form-control" value="<?php echo $user['location'] ?>" type="text" name="location" id="user_location" />
                                         </div>
                                     </div> <!-- close .form-group -->
                                 </div> <!-- close .col -->
@@ -151,7 +158,7 @@
                                     <div class="form-group">
                                         <label for="user_instagram_username">Instagram username</label>
                                         <div class="input-group">
-                                            <input class="form-control" type="text" name="user[instagram_username]" id="user_instagram_username" />
+                                            <input class="form-control" value="<?php echo $user['instagram'] ?>" type="text" name="instagram" id="user_instagram_username" />
                                         </div>
                                         <div class="help-block text-secondary">
                                             <p>So that we can feature you on <a href="https://instagram.com/unsplash">@unsplash</a></p>
@@ -162,9 +169,8 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="form-group">
                                         <label for="twitter_username">Twitter username</label>
-                                        <input type="hidden" name="user[twitter_account_attributes][id]" id="user_twitter_account_attributes_id" />
                                         <div class="input-group">
-                                            <input type="text" name="user[twitter_account_attributes][username]" id="twitter_username" class="form-control" />
+                                            <input type="text" value="<?php echo $user['twitter'] ?>" name="twitter" id="twitter" class="form-control" />
                                         </div>
 
                                         <div class="help-block text-secondary">
@@ -177,7 +183,7 @@
                                     <div class="form-group">
                                         <label for="user_bio">Bio</label>
                                             <div class="input-with-counter js-character-count-container">
-                                                <textarea class="form-control" rows="4" data-character-count="250" name="user[bio]" id="user_bio"></textarea>
+                                                <textarea class="form-control" value="<?php echo $user['bio'] ?>" rows="4" data-character-count="250" name="bio" id="user_bio"><?php echo $user['bio'] ?></textarea>
                                                 <div class="character-count character-count--textarea js-character-count">250</div>
                                              </div>
                                     </div> <!-- close .form-group -->
@@ -186,7 +192,7 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="form-group">
                                         <label for="user_interests">Interests <span class="text-secondary">(maximum 5)</span></label>
-                                        <input type="text" name="user[user_tags_set][custom_tags]" id="user_interests" value="" class="form-control" data-taggable="true" />
+                                        <input type="text" name="interest" value="<?php echo $user['interest'] ?>" id="user_interests" value="" class="form-control" data-taggable="true" />
                                         <div class="help-block text-secondary">
                                             <p>Your interests are generated from the types of photos you like, collect, and contribute.</p>
                                         </div> <!-- close .help-block -->
@@ -217,7 +223,7 @@
                                     </div> <!-- close .form-group -->
                                 </div> <!-- close .col -->
                             </div> <!-- close .row -->
-                        </form></div> <!-- close .form -->
+                         <!-- close .form -->
                     </div>
                 </div>
             </div>

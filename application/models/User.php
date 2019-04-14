@@ -8,6 +8,7 @@
                 "email" => $this->input->post('email', true),
                 "username" => $this->input->post('username', true),
                 "password" => $this->input->post('password', true),
+                "photo" => 'default.jpg'
             ];
             return $this->db->insert('user', $data);
         }
@@ -27,6 +28,10 @@
             $this->db->where('first_name', $first_name);
             return $this->db->get('photo')->result_array();
         }
+        public function getPhotoById($id) {
+            $this->db->where('id', $id);
+            return $this->db->get('user')->result_array();
+        }
         public function uploadPhoto($id, $file_name) {
             $this->db->where('id', $id);
             $dataUser = $this->db->get('user')->row_array();
@@ -38,22 +43,40 @@
             ];
             return $this->db->insert('photo', $data);
         }
-        // private function uploadPhoto() {
-        //     $config['upload_path']          = './assets/photoUser';
-        //     $config['allowed_types']        = 'gif|jpg|png';
-        //     $config['file_name']            = $this->first_name;
-        //     $config['overwrite']			= true;
-        //     // $config['max_size']             = 1024; // 1MB
-        //     // // $config['max_width']            = 1024;
-        //     // // $config['max_height']           = 768;
-
-        //     $this->load->library('upload', $config);
-
-        //     if ($this->upload->do_upload('image')) {
-        //         return $this->upload->data("file_name");
-        //     }
-    
-        //     return "default.jpg";
-        // }
+        public function updateProfile($id, $file_name) {
+            $data = [
+                "first_name"             => $this->input->post('first_name', true),
+                "last_name"              => $this->input->post('last_name', true),
+                // "email"                  => $this->input->post('email', true),
+                "username"               => $this->input->post('username', true),
+                "site"                   => $this->input->post('site', true),
+                "location"               => $this->input->post('location', true),
+                "instagram"              => $this->input->post('instagram', true),
+                "twitter"                => $this->input->post('twitter', true),
+                "bio"                    => $this->input->post('bio', true),
+                "interest"               => $this->input->post('interest', true),
+                "photo"                  => $file_name,
+            ];
+            $this->db->set('first_name', $data['first_name']);
+            $this->db->where('id', $id);
+            return $this->db->update('user', $data);
+        }
+        public function updateProfileNoPhoto($id) {
+            $data = [
+                "first_name"             => $this->input->post('first_name', true),
+                "last_name"              => $this->input->post('last_name', true),
+                // "email"                  => $this->input->post('email', true),
+                "username"               => $this->input->post('username', true),
+                "site"                   => $this->input->post('site', true),
+                "location"               => $this->input->post('location', true),
+                "instagram"              => $this->input->post('instagram', true),
+                "twitter"                => $this->input->post('twitter', true),
+                "bio"                    => $this->input->post('bio', true),
+                "interest"               => $this->input->post('interest', true),
+            ];
+            $this->db->set('first_name', $data['first_name']);
+            $this->db->where('id', $id);
+            return $this->db->update('user', $data);
+        }
     }
 ?>

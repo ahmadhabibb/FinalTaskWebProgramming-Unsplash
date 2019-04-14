@@ -12,6 +12,9 @@
             $first_name = $data['user']['first_name'];
             $photo = $this->User->getPhotoByName($first_name);
             $data['dataPhoto'] = $photo;
+            $id = $data['user']['id'];
+            $photo = $this->User->getPhotoById($id);
+            $data['userPhoto'] = $photo;
             $this->load->view('account/index', $data); 
         }
         public function upload() {
@@ -52,12 +55,7 @@
                 $this->load->view('join');
             }
         } 
-        public function edit() {
-            $this->load->database();
-            $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-            // $data['photo'] = $this->User->getAllPhotos(); 
-            $this->load->view('account/edit/index', $data); 
-        } 
+        
     
     }
 ?>
