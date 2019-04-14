@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleEdit.css">
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
     <div class="container-fluid">
@@ -221,6 +222,91 @@
                 </div>
             </div>
         </div>
+    <div class="container" id="container" style="margin-top: 200px;">
+        <footer class="footer-global js-global-footer">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h6 style=" font-size: 28px;
+                                    font-family: Helvetica;
+                                    font-weight: 700;
+                                    margin-bottom: 30px;
+                                    " class="gamma footer__header text-weight--bold">Unsplash</h6>
+                    </div>
+                </div> <!-- close .row -->
+                <div class="row" style="border-bottom: solid 1px #ADADAD; margin-bottom: 50px;">
+                    <div class="col-sm-2">
+                        <ul class="footer__nav list-unstyled menus">
+                            <li class="footer__nav-item"><a class="link--no-underline" href="/about">About</a></li>
+                            <li class="footer__nav-item"><a rel="nofollow" class="link--no-underline" href="https://medium.com/unsplash">Blog</a></li>
+                            <li class="footer__nav-item"><a class="link--no-underline" href="/hiring">Hiring</a></li>
+                        </ul>
+                    </div> <!-- close .col -->
+                    <div class="col-sm-2">
+                        <ul class="footer__nav list-unstyled menus">
+                            <li class="footer__nav-item"><a class="link--no-underline" href="/developers">Developers/API</a></li>
+                            <li class="footer__nav-item"><a rel="nofollow" class="link--no-underline" href="https://www.dropbox.com/sh/winm0o3ruxyfgnk/AAAaks0btBiGIHYGv1d0zdwOa">Press</a></li>
+                            <li class="footer__nav-item"><a rel="nofollow" class="link--no-underline" href="https://help.unsplash.com/">Help Center</a></li>
+                        </ul>
+                    </div> <!-- close .col -->
+                    <div class="col-sm-4">
+                        <ul class="footer__nav list-unstyled menus">
+                            <li class="footer__nav-item"><a class="link--no-underline" href="/apps/ios">Unsplash for iOS</a></li>
+                            <li class="footer__nav-item"><a class="link--no-underline" href="/wallpaper#mac-app">Unsplash for macOS</a></li>
+                            <li class="footer__nav-item"><a class="link--no-underline" href="https://instant.unsplash.com/">Unsplash Instant for Chrome</a></li>
+                        </ul>
+                    </div> <!-- close .col -->
+                    <div class="col-sm-4 footer-social-links" style="padding-left: 295px;">
+                        <ul class="footer__nav list-inline" style="display: flex;">
+                            <li class="list-inline-item-small" style="padding-right: 20px;">
+                                <a style="width: 20px; height:20px; color: black; font-size: 20px;" class="footer-social-link" href="https://twitter.com/unsplash" title="Follow Unsplash on Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item-small" style="padding-right: 20px;">
+                                <a style="color: black; font-size: 20px;" class="footer-social-link" href="https://facebook.com/unsplash" title="Like Unsplash on Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item-small" style="padding-right: 20px;">
+                                <a style="color:black; font-size: 20px;" class="footer-social-link" href="https://instagram.com/unsplash" title="Follow Unsplash on Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item-small" style="padding-right: 20px;">
+                                <a style="color:black; font-size: 20px;" class="footer-social-link" href="https://medium.com/unsplash" title="Follow Unsplash on Medium">
+                                    <i class="fab fa-medium"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- close .row -->
+
+                <div class="footer-sub">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="footer-sub__container">
+                                <div class="footer-sub__left hidden-xs" style="float: left;">
+                                    <a href="/" title="Home &mdash; Unsplash"><img class="footer-sub__logo" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" /></a>
+                                    <span style="margin-left: 10px;
+                                                 font-family: Helvetica;
+                                                 color: #ADADAD;
+                                                 font-size: 15px;">Make something awesome.
+                                    </span>
+                                </div>
+                                <div class="footer-sub__right" style="float: right;">
+                                    <ul class="footer__nav footer__nav--sub list-inline menuBawah">
+                                        <li class="list-inline-item"><a rel="nofollow" class="link--no-underline" href="/privacy">Privacy Policy</a></li>
+                                        <li class="list-inline-item"><a rel="nofollow" class="link--no-underline" href="/terms">Terms</a></li>
+                                        <li class="list-inline-item"><a rel="nofollow" class="link--no-underline" href="/security">Security</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- close .footer-sub -->
+            
+        </footer> <!-- close .footer-global -->
+    </div>
 
     <!-- --------------- MODAL SUBMIT A PHOTO --------------- -->
     <!-- Modal -->

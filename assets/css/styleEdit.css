@@ -88,8 +88,13 @@
     background-color: #EEEEEE;
     border-color: #EEEEEE;
 }
-.fa, .fas {
+.fa, .fas, .fab {
     color: #ADADAD;
+    transition: 0.5s;
+}
+.fab:hover {
+    color: black;
+    transition: 0.5s;
 }
 .box__dragndrop,
 .box__uploading,
@@ -211,4 +216,33 @@
 #menu li a:hover {
     color: black;
     transition: 0.5s;
+}
+#menus {
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 14px;
+}
+.menus {
+    margin-bottom: 50px;
+}
+.menus li {
+    margin-bottom: 8px;
+}
+.menus li a {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #ADADAD;
+}
+.menus li a:hover {
+    color: black;
+    text-decoration: none;
+}
+.menuBawah li a {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #ADADAD;
+}
+.menuBawah li a:hover {
+    color: black;
+    text-decoration: none;
 }
