@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleAccount.css"> 
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -52,7 +53,7 @@
                     <button style="margin-left:10px;" class="submitPhoto btn btn-light" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Submit a Photo</button>
                     <button style="margin-left:10px;" class="fas fa-bell btn" style="color: #ADADAD;"></button>
                     <?php foreach($userPhoto as $photo) { ?>
-                        <a href="#"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="40px" style="border-radius:25px;"></a>
+                        <a href="#"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="35px" style="border-radius:25px;"></a>
                     <?php } ?>
                 </div>
             </div>
@@ -69,7 +70,7 @@
                     <a href="<?php echo base_url();?>edit" style="margin-left:40px; margin-top:10px;" class="editProfile btn btn-light">Edit Profile</a>
                     <button class="fas fa-ellipsis-h btn btn-light" type="button" data-toggle="dropdown" style="margin-left:10px; padding:10px; margin-top:10px;"></button>
                     <ul class="dropdown-menu" style="background-color: black;">
-                        <li><a href="#">Account Setting</a></li>
+                        <li><a href="<?php echo base_url() ?>/edit">Account Setting</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Submit a Photo</a></li>
                         <li><a href="<?php echo base_url('Login/logout') ?>">Logout</a></li>
                     </ul>
@@ -93,8 +94,8 @@
                     <?php echo count($dataPhoto); ?> Photos</h3>
                 
                     <div class="col-md-12">
-                        <?php foreach($dataPhoto as $photo) { ?>
-                            <img src="<?php echo base_url('assets/photoUser/') . $photo['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;">
+                        <?php foreach($dataPhoto as $dataPhotoUser) { ?>
+                            <button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" onclick="myFunction(this);" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
                         <?php } ?>
                     </div>
                 
@@ -164,6 +165,43 @@
             </div>
         </div>
     </div>
+
+    <!-- --------------- MODAL DETAIL PHOTO --------------- -->
+    <!-- Modal -->
+<?php foreach($dataPhoto as $dataPhotoUser) { ?>
+    <div class="modal fade" id="modal<?php echo $dataPhotoUser['id_photo'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1040px;">
+            <div class="modal-content" style="width: auto;">
+                <div class="modal-header" style="display: flex;">
+                    
+                    <?php foreach($userPhoto as $photo) { ?>
+                        <a href="#"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="35px" style="border-radius:25px; margin-right: 10px;"></a>
+                    <?php } ?>
+                    <div class="coba">
+                        <h5 style="font-size:15px; font-family: Helvetica; margin-bottom: -10px;"  class="modal-title" id="exampleModalCenterTitle"><?php echo $user['first_name'] ?> <?php echo $user['last_name'] ?></h5>
+                        <span style="font-size:11px; font-family: Helvetica;">@<?php echo $user['username'];?></span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <a class="btn btn-primary" href="#">Download</a>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" src="<?php echo base_url(); ?>assets/photoProfile/Tes.jpg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
 </body>
 <!-- <script>
     $('._1xpOz').on('change', function() {
@@ -171,4 +209,13 @@
         $(this).next('._3rSeE').addClass("selected").html(fileName);
     });
 </script> -->
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
 </html>

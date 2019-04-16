@@ -5,16 +5,21 @@
             $this->load->model('User');
             // $this->load->model('uploadPhoto', 'upl');
             $this->load->library('form_validation');
+            $this->load->helper('cookie');
         }
         public function index() {
             $this->load->database();
             $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
             $first_name = $data['user']['first_name'];
-            $photo = $this->User->getPhotoByName($first_name);
-            $data['dataPhoto'] = $photo;
+            $photoAll = $this->User->getPhotoByName($first_name);
+            $data['dataPhoto'] = $photoAll;
             $id = $data['user']['id'];
             $photo = $this->User->getPhotoById($id);
             $data['userPhoto'] = $photo;
+            // $data['photo'] = $this->db->get_where('photo', ['id' => $this->input->cookie('id')])->row_array();
+            // $idPhoto = $data['photo']['id'];
+            // $data['idPhoto'] = $idPhoto;
+            // var_dump($data['dataPhoto']);
             $this->load->view('account/index', $data); 
         }
         public function upload() {
@@ -37,7 +42,7 @@
                     $file_name = $this->upload->data('file_name');
                     $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
                     $id_user = $data['user']['id'];
-                    $this->User->uploadPhoto($id_user, $file_name);
+                    $dataPhotoUser = $this->User->uploadPhoto($id_user, $file_name);
 
                     redirect('account');
                 }

@@ -53,7 +53,7 @@
                     <button style="margin-left:10px;" class="submitPhoto btn btn-light" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Submit a Photo</button>
                     <button style="margin-left:10px;" class="fas fa-bell btn" style="color: #ADADAD;"></button>
                     <?php foreach($dataPhoto as $photo) { ?>
-                        <a href="<?php echo base_url();?>account"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="40px" style="border-radius:25px;"></a>
+                        <a href="<?php echo base_url();?>account"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="35px" style="border-radius:25px;"></a>
                     <?php } ?>
                 </div>
             </div>
