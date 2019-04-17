@@ -5,7 +5,8 @@
             $this->load->model('User');
             // $this->load->model('uploadPhoto', 'upl');
             $this->load->library('form_validation');
-            $this->load->helper('cookie');
+            // $this->load->helper('download');
+            $this->load->helper(array('url','download'));
         }
         public function index() {
             $this->load->database();
@@ -16,10 +17,10 @@
             $id = $data['user']['id'];
             $photo = $this->User->getPhotoById($id);
             $data['userPhoto'] = $photo;
-            // $data['photo'] = $this->db->get_where('photo', ['id' => $this->input->cookie('id')])->row_array();
-            // $idPhoto = $data['photo']['id'];
-            // $data['idPhoto'] = $idPhoto;
-            // var_dump($data['dataPhoto']);
+            
+            // $this->load->helper('download');
+
+            
             $this->load->view('account/index', $data); 
         }
         public function upload() {
@@ -59,8 +60,6 @@
             else {
                 $this->load->view('join');
             }
-        } 
-        
-    
+        }
     }
 ?>

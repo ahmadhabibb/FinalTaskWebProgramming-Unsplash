@@ -32,9 +32,10 @@
             $this->db->where('id', $id);
             return $this->db->get('user')->result_array();
         }
-        public function getIdPhoto($id) {
-            
-        }
+        // public function getPhotoUserById($id) {
+        //     $this->db->where('id', $id);
+        //     return $this->db->get('photo')->result_array();
+        // }
         public function uploadPhoto($id, $file_name) {
             $this->db->where('id', $id);
             $dataUser = $this->db->get('user')->row_array();

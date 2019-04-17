@@ -166,8 +166,8 @@
         </div>
     </div>
 
-    <!-- --------------- MODAL DETAIL PHOTO --------------- -->
-    <!-- Modal -->
+<!-- --------------- MODAL DETAIL PHOTO --------------- -->
+<!-- Modal -->
 <?php foreach($dataPhoto as $dataPhotoUser) { ?>
     <div class="modal fade" id="modal<?php echo $dataPhotoUser['id_photo'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1040px;">
@@ -181,13 +181,13 @@
                         <h5 style="font-size:15px; font-family: Helvetica; margin-bottom: -10px;"  class="modal-title" id="exampleModalCenterTitle"><?php echo $user['first_name'] ?> <?php echo $user['last_name'] ?></h5>
                         <span style="font-size:11px; font-family: Helvetica;">@<?php echo $user['username'];?></span>
                     </div>
+                    <a style="margin-left: 661px;" class="btn btn-light" href="<?php echo base_url('assets/photoUser/'). $dataPhotoUser['photo'];?>" download>Download</a> 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <a class="btn btn-primary" href="#">Download</a>
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <button type="button" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
+                    <button type="button" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="1000px" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -197,25 +197,4 @@
         </div>
     </div>
 <?php } ?>
-    <div class="container">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" src="<?php echo base_url(); ?>assets/photoProfile/Tes.jpg" style="width:100%">
-        <div id="imgtext"></div>
-    </div>
-</body>
-<!-- <script>
-    $('._1xpOz').on('change', function() {
-        let fileName = $(this).val().split('\\').pop();
-        $(this).next('._3rSeE').addClass("selected").html(fileName);
-    });
-</script> -->
-<script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-</script>
 </html>
