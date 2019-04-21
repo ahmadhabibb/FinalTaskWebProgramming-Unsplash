@@ -1,5 +1,17 @@
 <?php
     class User extends CI_Model {
+        public function checkEmail($email) {
+            // $this->load->database();
+            // $email = $this->input->post('email', true);
+            $this->db->where('email', $email);
+            $check = $this->db->get('user')->row_array();
+            if ($check == NULL) {
+                return TRUE;
+            }
+            else {
+                return FALSE;
+            }
+        }
         public function addUser() {
             $this->load->database();
             $data = [

@@ -19,8 +19,20 @@
                 $this->load->view('join/index');
             }
             else {
-                $this->User->addUser();
-                redirect('login');
+                $email = $this->input->post('email', true);
+                $checkEmail = $this->User->checkEmail($email);
+                
+                if ($checkEmail == TRUE) {
+                    $this->User->addUser();
+                    redirect('login');
+                    echo "ADA";
+                }
+                else if ($checkEmail == FALSE) {
+                    
+                    $this->session->set_flashdata('flash', 'Email is already in Database');
+                    redirect('join');
+                }
+                
             }
             // $this->load->view('resources/footer');
         }

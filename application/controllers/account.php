@@ -11,16 +11,19 @@
         public function index() {
             $this->load->database();
             $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-            $first_name = $data['user']['first_name'];
-            $photoAll = $this->User->getPhotoByName($first_name);
-            $data['dataPhoto'] = $photoAll;
-            $id = $data['user']['id'];
-            $photo = $this->User->getPhotoById($id);
-            $data['userPhoto'] = $photo;
+            if ($data['user'] == NULL) {
+                redirect('login');
+            }
+            else {
+                $first_name = $data['user']['first_name'];
+                $photoAll = $this->User->getPhotoByName($first_name);
+                $data['dataPhoto'] = $photoAll;
+                $id = $data['user']['id'];
+                $photo = $this->User->getPhotoById($id);
+                $data['userPhoto'] = $photo;
+            }
             
             // $this->load->helper('download');
-
-            
             $this->load->view('account/index', $data); 
         }
         public function upload() {

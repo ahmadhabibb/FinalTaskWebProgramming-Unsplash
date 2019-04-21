@@ -13,6 +13,21 @@
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
 </head>
 <body>  
+				<!-- -------------------- FLASH DATA -------------------- -->
+				<?php if ($this->session->flashdata('flash')) : ?>
+    				<div class="row text-center fixed-top">
+        				<div class="col-md-12">
+							<div class="alert alert-dismissible fade show" role="alert"
+							style="background-color: #E36447; padding: 15px; margin:0; color:white;">
+							    <?= $this->session->flashdata('flash'); ?>.
+                				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    				<span aria-hidden="true">&times;</span>
+                				</button>
+            				</div>
+        				</div>
+    				</div>
+    			<?php endif; ?>
+				<!-- -------------------- FLASH DATA -------------------- -->
 <div class="left-content">
 	<div id="row">
 		<!-- <img src="assets/img/img-register.jpg" alt="Img Login"> -->

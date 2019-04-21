@@ -9,10 +9,15 @@
         public function index() {
             $this->load->database();
             $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-            $id = $data['user']['id'];
-            $photo = $this->User->getPhotoById($id);
-            $data['dataPhoto'] = $photo;
-            $this->load->view('edit/index', $data); 
+            if($data['user'] == NULL) {
+                redirect('login');
+            }
+            else {
+                $id = $data['user']['id'];
+                $photo = $this->User->getPhotoById($id);
+                $data['dataPhoto'] = $photo;
+                $this->load->view('edit/index', $data); 
+            }
         } 
         public function editProfile() {
             $this->load->library('form_validation');

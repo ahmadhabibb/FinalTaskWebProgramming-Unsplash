@@ -85,8 +85,8 @@
     border-color: #EEEEEE;
 }
 .form-control {
-    background-color: #EEEEEE;
-    border-color: #EEEEEE;
+    background-color: #white;
+    border: solid 1px #EEEEEE;
 }
 .fa, .fas, .fab {
     color: #ADADAD;
