@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Beautiful Free Images & Pictures</title>
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/csshome.css"> -->
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,22 +12,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<<<<<<< HEAD
-    <!-- <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleAccount.css">  -->
-=======
-    <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleAccount.css"> 
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/stylehome.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/stylehome.css"> 
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
 </head>
+
+
 <body>
 <!-- -------------------------------------------------------------BAG 1--------------------------------------------------------------------------- -->
-	<div class="container">
+<div class="container>
         <div class="row">
             <div class="col-md-12 fixed-top" style="display: -webkit-inline-box; padding-top: 10px; background-color: white;">
-                <a href="<?php echo base_url();?>Welcome"><img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/></a>
+                    <img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/>
                 <div class="col-lg-8">
-				<form action="search" method="POST">
                     <input type="text" placeholder="Search free high-resolution photos" class="form-control" name="search"
                     style=" padding-left:30px; 
                             margin: 0; 
@@ -36,18 +33,13 @@
                             border-radius:25px;
                             font-size: 14px;
                             height: 40px;
-							width: 1270px;">
-				</form>
+                            width: 1270px;">
                 </div>
-                <div class="col-sm-2" style="margin:0; padding:0; max-width: 270px;">
+                <div class="col-sm-2" style="margin:0; padding:0; max-width: 350px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">
-<<<<<<< HEAD
+                        <li><a href="#">Home</a></li>
                         <li><a href="#">Collections</a></li>
                         <li><a href="#">Explore</a></li>
-=======
-                        <li><a href="<?php base_url(); ?>collection">Collections</a></li>
-                        <li><a href="<?php base_url(); ?>explore">Explore</a></li>
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
                     </ul>
                     <button class="fas fa-ellipsis-h btn" type="button" data-toggle="dropdown" style="margin-left:10px;"></button>
                     <ul class="dropdown-menu" style="background-color: black;">
@@ -62,28 +54,24 @@
                     </ul>
                 </div>
                 <div class="col-lg-2" style="display: inline;">
-                    <a href="<?php echo base_url();?>login"><button style="margin-left:10px;" class="submitPhoto btn btn-light">Submit a Photo</button></a>
-                    <!-- <button style="margin-left:10px;" class="fas fa-bell btn" style="color: #ADADAD;"></button> -->
-                    
-                    <a href="<?php echo base_url();?>login"><button style="margin-left:10px;" class="submitPhoto btn btn-light">Login</button></a>
-                    <a href="<?php echo base_url();?>join"><button style="margin-left:10px;" class="submitPhoto btn btn-success">Join Free</button></a>
+                    <button style="margin-left:10px;" class="submitPhoto btn btn-light" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Submit a Photo</button>
+                    <button style="margin-left:10px;" class="fas fa-bell btn" style="color: #ADADAD;"></button>
+                    <?php foreach($userPhoto as $photo) { ?>
+                        <a href="#"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="40px" style="border-radius:25px;"></a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
     </div>
     <!-- -------BAWAHCSS-------- -->
-<<<<<<< HEAD
-	<div class="Unav Unav1 fixed-top" style="margin-top:55px; box-shadow: none; background-color: white;">
-=======
 	<div class="_1EkxQ _8-qoZ fixed-top" style="margin-top:55px; box-shadow: none; background-color: white;">
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
 		<div>
 			<ul class="_2ZZrD">
 				<li class="_3ABqA">
 					<a class="SI2Kz _1CBrG xLon9 _2OOtd" aria-current="page" href="/">Editorial</a>
 				</li>
 				<li class="_3ABqA">
-					<a class="SI2Kz _1CBrG xLon9" href="#">Following</a>
+					<a class="SI2Kz _1CBrG xLon9" href="/following">Following</a>
 				</li>
 			</ul>
 		</div>
@@ -93,49 +81,49 @@
 				<div>
 					<ul class="_2ZZrD">
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Wallpapers</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/wallpapers">Wallpapers</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Textures &amp; Patterns</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/textures-patterns">Textures &amp; Patterns</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Nature</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/nature">Nature</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Current Events</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/current-events">Current Events</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Architecture</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/architecture">Architecture</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Business &amp; Work</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/business-work">Business &amp; Work</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Animals</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/animals">Animals</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Travel</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/travel">Travel</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Fashion</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/fashion">Fashion</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Food &amp; Drink</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/food-drink">Food &amp; Drink</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Spirituality</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/spirituality">Spirituality</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Experimental</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/experimental">Experimental</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">People</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/people">People</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Health</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/health">Health</a>
 						</li>
 						<li class="_3ABqA _3exYo">
-							<a class="SI2Kz _1CBrG xLon9" href="#">Arts &amp; Culture</a>
+							<a class="SI2Kz _1CBrG xLon9" href="/t/arts-culture">Arts &amp; Culture</a>
 						</li>
 					</ul>
 				</div>
@@ -232,53 +220,9 @@
 			</div>
 		</div>
 <!-- ----------------------------------------------------------------------BAG 3------------------------------------------------------------------------------------------------------- -->
-<<<<<<< HEAD
-<div class="col-md-12">
-    <?php foreach($allPhoto as $dataPhotoUser) { ?>
-        <button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px; cursor: zoom-in;"></button>
-    <?php } ?>
-=======
-<div class="row">
-	<div class="col-md-2"></div>
-		<div class="col-md-10 col-xl-10">
-    		<?php foreach($allPhoto as $dataPhotoUser) { ?>
-        		<button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px; cursor: zoom-in;"></button>
-    		<?php } ?>
+		<div id="spinner" class="_72qNE in79c">
+			<div class="_1d72G"></div>
 		</div>	
-	<div class="col-md-2"></div>
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
-</div>	
-
-<!-- --------------- MODAL DETAIL PHOTO --------------- -->
-<!-- Modal -->
-<?php foreach($allPhoto as $dataPhotoUser) { ?>
-    <div class="modal fade" id="modal<?php echo $dataPhotoUser['id_photo'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1040px;">
-            <div class="modal-content" style="width: auto;">
-                <div class="modal-header" style="display: flex;">
-                    
-                    <a href="#"><img src="<?php echo base_url('assets/photoProfile/') . $dataPhotoUser['photoUser']; ?>" width="35px" style="border-radius:25px; margin-right: 10px;"></a>
-                    
-                    <div class="coba">
-                        <h5 style="font-size:15px; font-family: Helvetica; margin-bottom: -10px;"  class="modal-title" id="exampleModalCenterTitle"><?php echo $dataPhotoUser['first_name'] ?> <?php echo $dataPhotoUser['last_name'] ?></h5>
-                        <span style="font-size:11px; font-family: Helvetica;">@<?php echo $dataPhotoUser['username'];?></span>
-                    </div>
-                    <a style="margin-left: 661px;" class="btn btn-light" href="<?php echo base_url('assets/photoUser/'). $dataPhotoUser['photo'];?>" download>Download</a> 
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <button type="button" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="1000px" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php } ?>
 
 </body>
 </html>

@@ -12,7 +12,7 @@
                 return FALSE;
             }
         }
-        public function addUser() {
+        public function addUser($password) {
             $this->load->database();
             
             $data = [
@@ -20,7 +20,7 @@
                 "last_name" => $this->input->post('last_name', true),
                 "email" => $this->input->post('email', true),
                 "username" => $this->input->post('username', true),
-                "password" => $this->input->post('password', true),
+                "password" => $password,
                 "photo" => 'default.jpg'
             ];
             return $this->db->insert('user', $data);

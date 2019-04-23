@@ -1,0 +1,361 @@
+
+/*.menu {
+    margin-left: 30px;
+}
+.menu li {
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: none;
+    list-style-type: none;
+    padding-top: 7px;
+    margin-left: 10px;
+}
+.menu li a {
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.menu li a:hover {
+    color:#111111 !important;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.7s;
+}
+.menu li svg {
+    text-decoration: none;
+    text-transform: none;
+}
+#container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 1320px;
+}
+#menu {
+    list-style-type: none;
+}
+#menu h4 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+#menu li {
+    padding-bottom: 15px;
+}
+#menu .active a {
+    text-decoration: none;
+    text-transform: none;
+    color: black;   
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight: 400; 
+}
+#menu li a{
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 15px;
+    text-decoration: underline;
+}
+#menu li a:hover {
+    color: black;
+    transition: 0.5s;
+}
+#menus {
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 14px;
+}
+.menus {
+    margin-bottom: 50px;
+}
+.menus li {
+    margin-bottom: 8px;
+}
+.menus li a {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #ADADAD;
+}
+.menus li a:hover {
+    color: black;
+    text-decoration: none;
+}*/
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+
+@font-face{
+    font-family:"Helvetica";
+    src:url('../font/Helvetica.ttf');
+}
+@font-face{
+    font-family:"Helvetica Bold";
+    src:url('../font/Helvetica-Bold.ttf');
+}
+
+.menu {
+    margin-left: 30px;
+}
+.menu li {
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: none;
+    list-style-type: none;
+    padding-top: 7px;
+    margin-left: 10px;
+}
+.menu li a {
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.menu li a:hover {
+    color:#111111 !important;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.7s;
+}
+.menu li svg {
+    text-decoration: none;
+    text-transform: none;
+}
+.btn-light {
+    border-color: #EEEEEE;
+    background-color: white;
+    color: #ADADAD;
+    font-size: 14px;
+}
+.btn-light:hover {
+    border-color: #212529;
+    color: #212529;
+    background-color: white;
+    font-size: 14px;
+}
+.btn-light:focus {
+    border-color: #EEEEEE;
+    background-color: white;
+    color: #ADADAD;
+    font-size: 14px;
+}
+.btn-success {
+    background-color: #3cb46e;
+    font-size: 14px;
+}
+.btn-success:hover {
+    background-color: #37A866;
+    border-color: #37A866;
+}
+.btn:focus {
+    border:none;
+    box-shadow: none;
+}
+.fa-ellipsis-h {
+    color: #ADADAD;
+}
+.dropdown-menu li a{
+    color: white;
+    font-size: 13px;
+    padding-left: 20px;
+    transition: 0.5s;
+}
+.dropdown-menu li a:hover {
+    color: #8B8B8B;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.5s;
+}
+.form-control:focus {
+    background-color: white;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+.form-control {
+    background-color: #white;
+    border: solid 1px #EEEEEE;
+}
+.fa, .fas, .fab {
+    color: #ADADAD;
+    transition: 0.5s;
+}
+.fab:hover {
+    color: black;
+    transition: 0.5s;
+}
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+._1A4KC {
+    cursor: pointer;
+    transition: border-color .15s ease-in-out,background-color .15s ease-in-out;
+}
+._2w5SL {
+    padding: 32px 16px 12px;
+    min-height: 268px;
+    min-width: 466px;
+    flex-direction: column;
+    font-size: 16px;
+}
+._2KKlp {
+    border-color: #e3e3e3;
+}
+.NRa9H {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ReA9D {
+    margin-left: 8px;
+}
+
+._37zTg {
+    color: #999;
+    fill: currentColor;
+    background-color: #fff;
+    border-color: #ddd;
+}
+._1zIyn {
+    display: inline-block;
+    height: 32px;
+    padding: 0 11px;
+    font-size: 14px;
+    line-height: 30px;
+}
+._1l4Hh {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    transition: all .2s ease-in-out;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+._1CBrG {
+    text-decoration: none;
+}
+.xLon9 {
+    font-weight: 500;
+}
+._2iX7Z {
+    display: none;
+}
+._64ju2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+.modal-footer a {
+    color: #AAAAAA;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+}
+.modal-footer a:hover {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+}
+.modal-title {
+    font-family: Helvetica;
+    font-size: 15px;
+}
+#container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 1320px;
+}
+#menu {
+    list-style-type: none;
+    padding-top: 30px;
+}
+#menu h4 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+#menu li {
+    padding-bottom: 15px;
+}
+#menu .active a {
+    text-decoration: none;
+    text-transform: none;
+    color: black;   
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight: 400; 
+}
+#menu li a{
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 15px;
+    text-decoration: underline;
+}
+#menu li a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.unsub{
+     color: #ADADAD;
+     text-decoration: underline;
+}
+.unsub:hover{
+     color: black;
+     transition: 0.5s;
+     text-decoration: underline;
+}
+
+#menus {
+    color: #ADADAD;
+    transition: 0.5s;
+    font-size: 14px;
+}
+.menus {
+    margin-bottom: 50px;
+}
+.menus li {
+    margin-bottom: 8px;
+}
+.menus li a {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #ADADAD;
+}
+.menus li a:hover {
+    color: black;
+    text-decoration: none;
+}
+.menuBawah li a {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #ADADAD;
+}
+.menuBawah li a:hover {
+    color: black;
+    text-decoration: none;
+}
+.upload {
+    /* padding-bottom: 150px; */
+}
+label {
+    color: black;
+}
+label :hover{
+    text-decoration: underline;
+}
+#file_input_id{
+    display:none;
+}

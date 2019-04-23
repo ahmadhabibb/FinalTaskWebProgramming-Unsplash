@@ -38,8 +38,13 @@
                 <div class="col-sm-2" style="margin:0; padding:0; max-width: 350px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">
                         <li><a href="<?php echo base_url();?>Welcome">Home</a></li>
+<<<<<<< HEAD
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Explore</a></li>
+=======
                         <li><a href="<?php base_url(); ?>collection">Collections</a></li>
                         <li><a href="<?php base_url(); ?>explore">Explore</a></li>
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
                     </ul>
                     <button class="fas fa-ellipsis-h btn" type="button" data-toggle="dropdown" style="margin-left:10px;"></button>
                     <ul class="dropdown-menu" style="background-color: black;">
@@ -228,7 +233,11 @@
     		<?php } ?>
 		</div>	
 	<div class="col-md-2"></div>
+<<<<<<< HEAD
+	</div>
+=======
 </div>
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
 <!-- --------------- MODAL SUBMIT A PHOTO --------------- -->
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -242,6 +251,16 @@
             </div>
             <div class="modal-body">
             <?php echo form_open_multipart('account/upload'); ?>
+<<<<<<< HEAD
+                <div class="_2lwrF">
+                    <div class="IM4-L">
+                        <div class="_1xpOz">
+                            <label class="_1OoXQ _2KKlp _2w5SL _1A4KC">
+                                <div class="NRa9H">
+                                    <div class="_3rSeE" style="width: 150px; height: 93px;">
+                                        <div class="IEpfq" style="padding-bottom: 62%;">
+                                            <img src="<?php echo base_url(); ?>/assets/img/img-upload.png" class="_2zEKz">
+=======
                 <div class="form_modal_upload">
                     <div class="form_upload">
                         <div class="form_modal_">
@@ -250,6 +269,7 @@
                                     <div class="img_upload" style="width: 150px; height: 93px;">
                                         <div class="image_upload" style="padding-bottom: 62%;">
                                             <img src="<?php echo base_url(); ?>/assets/img/img-upload.png">
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
                                         </div>
                                     </div>
                                     <div style="font-family: Helvetica;
@@ -257,12 +277,21 @@
                                                 color: #AAAAAA;
                                                 margin-top: 30px;">
                                                 Drop your photos here or 
+<<<<<<< HEAD
+                                        <div class="_37zTg _1l4Hh _1CBrG _1zIyn xLon9 ReA9D" style="background-color: #fff;
+                                                                                                    border-color: #ddd;">Browse</div>
+                                    </div>
+                                </div>
+                                <input type="file" multiple="" accept="image/jpeg" class="_2dMtn _2iX7Z" name="image">
+                                <div class="_64ju2" style="font-family: Helvetica; font-size: 12px; color: #AAAAAA;">You have 9 uploads remaining this week.</div>
+=======
                                         <div class="button style_btn bttn browse" style="background-color: #fff;
                                                                                                     border-color: #ddd;">Browse</div>
                                     </div>
                                 </div>
                                 <input type="file" multiple="" accept="image/jpeg" class="input_photo" name="image">
                                 <div class="textBawah" style="font-family: Helvetica; font-size: 12px; color: #AAAAAA;">You have 9 uploads remaining this week.</div>
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
                             </label>
                         </div>
                         <!-- <form action="" method="POST"> -->
@@ -292,7 +321,11 @@
 
                     <div class="coba">
                         <h5 style="font-size:15px; font-family: Helvetica; margin-bottom: -10px;"  class="modal-title" id="exampleModalCenterTitle"><?php echo $dataPhotoUser['first_name'] ?> <?php echo $dataPhotoUser['last_name'] ?></h5>
+<<<<<<< HEAD
+                        <span style="font-size:11px; font-family: Helvetica;">@<?php echo $user['username'];?></span>
+=======
                         <span style="font-size:11px; font-family: Helvetica;">@<?php echo $dataPhotoUser['username'];?></span>
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
                     </div>
                     <a style="margin-left: 661px;" class="btn btn-light" href="<?php echo base_url('assets/photoUser/'). $dataPhotoUser['photo'];?>" download>Download</a> 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
