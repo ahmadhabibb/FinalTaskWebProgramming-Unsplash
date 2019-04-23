@@ -30,7 +30,11 @@
         public function logout() {
             $this->session->sess_destroy();
             $this->session->unset_userdata($checkLogin);
+<<<<<<< HEAD
             redirect('Welcome');
+=======
+            redirect('welcome');
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
         }
     }
 ?>

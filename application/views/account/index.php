@@ -128,13 +128,13 @@
             </div>
             <div class="modal-body">
             <?php echo form_open_multipart('account/upload'); ?>
-                <div class="_2lwrF">
-                    <div class="IM4-L">
-                        <div class="_1xpOz">
-                            <label class="_1OoXQ _2KKlp _2w5SL _1A4KC">
-                                <div class="NRa9H">
-                                    <div class="_3rSeE" style="width: 150px; height: 93px;">
-                                        <div class="IEpfq" style="padding-bottom: 62%;">
+                <div class="form_modal_upload">
+                    <div class="form_upload">
+                        <div class="form_modal_">
+                            <label class="user data accounts">
+                                <div class="modal_upload">
+                                    <div class="img_upload" style="width: 150px; height: 93px;">
+                                        <div class="image_upload" style="padding-bottom: 62%;">
                                             <img src="<?php echo base_url(); ?>/assets/img/img-upload.png" class="_2zEKz">
                                         </div>
                                     </div>
@@ -143,12 +143,12 @@
                                                 color: #AAAAAA;
                                                 margin-top: 30px;">
                                                 Drop your photos here or 
-                                        <div class="_37zTg _1l4Hh _1CBrG _1zIyn xLon9 ReA9D" style="background-color: #fff;
+                                        <div class="button style_btn bttn browse" style="background-color: #fff;
                                                                                                     border-color: #ddd;">Browse</div>
                                     </div>
                                 </div>
-                                <input type="file" multiple="" accept="image/jpeg" class="_2dMtn _2iX7Z" name="image">
-                                <div class="_64ju2" style="font-family: Helvetica; font-size: 12px; color: #AAAAAA;">You have 9 uploads remaining this week.</div>
+                                <input type="file" multiple="" accept="image/jpeg" class="input_photo" name="image">
+                                <div class="textBawah" style="font-family: Helvetica; font-size: 12px; color: #AAAAAA;">You have 9 uploads remaining this week.</div>
                             </label>
                         </div>
                         <!-- <form action="" method="POST"> -->

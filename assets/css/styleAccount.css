@@ -97,44 +97,46 @@
 .box__error {
   display: none;
 }
-._1A4KC {
+.accounts {
     cursor: pointer;
     transition: border-color .15s ease-in-out,background-color .15s ease-in-out;
 }
-._2w5SL {
+.data {
     padding: 32px 16px 12px;
     min-height: 268px;
     min-width: 466px;
     flex-direction: column;
     font-size: 16px;
 }
-._2KKlp {
+.user {
     border-color: #e3e3e3;
 }
-.NRa9H {
+.modal_upload {
     padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.ReA9D {
+.browse {
     margin-left: 8px;
 }
 
-._37zTg {
+.button {
     color: #999;
     fill: currentColor;
     background-color: #fff;
     border-color: #ddd;
 }
-._1zIyn {
+.bttn {
     display: inline-block;
     height: 32px;
     padding: 0 11px;
     font-size: 14px;
     line-height: 30px;
+    text-decoration: none;
+    font-weight: 500;
 }
-._1l4Hh {
+.style_btn {
     border: 1px solid transparent;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0,0,0,.04);
@@ -145,16 +147,16 @@
     -ms-user-select: none;
     user-select: none;
 }
-._1CBrG {
+/* .ini_btn {
     text-decoration: none;
 }
 .xLon9 {
     font-weight: 500;
-}
-._2iX7Z {
+} */
+.input_photo {
     display: none;
 }
-._64ju2 {
+.textBawah {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 0;

@@ -3065,22 +3065,38 @@ button[disabled]._1l4Hh:hover {
  color: #A19F9F;
  border-bottom:2px solid
 }
+<<<<<<< HEAD
 .Unav1 {
+=======
+._8-qoZ {
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
  display:flex;
  width:100%;
  background-color:#fff
 }
 @media (min-width:768px) {
+<<<<<<< HEAD
  .Unav1 {
+=======
+ ._8-qoZ {
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
   position:fixed
  }
 }
 @media (max-width:767px) {
+<<<<<<< HEAD
  .Unav1 {
   position:static
  }
 }
 .Unav {
+=======
+ ._8-qoZ {
+  position:static
+ }
+}
+._1EkxQ {
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
  z-index:5;
  box-shadow:0 4px 12px rgba(0,0,0,.08),0 0 1px rgba(1,0,0,.1)
 }
@@ -4461,3 +4477,72 @@ button[disabled]._1l4Hh:hover {
 ._1EBGx {
  padding:8px
 }
+<<<<<<< HEAD
+=======
+
+
+.accounts {
+    cursor: pointer;
+    transition: border-color .15s ease-in-out,background-color .15s ease-in-out;
+}
+.data {
+    padding: 32px 16px 12px;
+    min-height: 268px;
+    min-width: 466px;
+    flex-direction: column;
+    font-size: 16px;
+}
+.user {
+    border-color: #e3e3e3;
+}
+.modal_upload {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.browse {
+    margin-left: 8px;
+}
+
+.button {
+    color: #999;
+    fill: currentColor;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.bttn {
+    display: inline-block;
+    height: 32px;
+    padding: 0 11px;
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.style_btn {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    transition: all .2s ease-in-out;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* .ini_btn {
+    text-decoration: none;
+}
+.xLon9 {
+    font-weight: 500;
+} */
+.input_photo {
+    display: none;
+}
+.textBawah {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+>>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
