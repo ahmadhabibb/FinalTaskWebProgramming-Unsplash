@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12" style="display: -webkit-inline-box; padding-top: 10px;">
-                    <img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/>
+                <a href="<?php echo base_url();?>Welcome"><img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/></a>
                 <div class="col-lg-8">
                     <!-- <input type="text" placeholder="Search free high-resolution photos" class="form-control" name="search"
                     style=" padding-left:30px; 

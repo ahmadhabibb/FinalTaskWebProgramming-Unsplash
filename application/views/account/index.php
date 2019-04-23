@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 fixed-top" style="display: -webkit-inline-box; padding-top: 10px; background-color: white;">
-                    <img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/>
+                <a href="<?php echo base_url();?>Welcome"><img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/></a>
                 <div class="col-lg-8">
                     <input type="text" placeholder="Search free high-resolution photos" class="form-control" name="search"
                     style=" padding-left:30px; 
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-sm-2" style="margin:0; padding:0; max-width: 350px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="<?php base_url();?>Welcome">Home</a></li>
                         <li><a href="#">Collections</a></li>
                         <li><a href="#">Explore</a></li>
                     </ul>
@@ -95,7 +95,7 @@
                 
                     <div class="col-md-12">
                         <?php foreach($dataPhoto as $dataPhotoUser) { ?>
-                            <button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" onclick="myFunction(this);" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
+                            <button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" onclick="myFunction(this);" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px; cursor: zoom-in;"></button>
                         <?php } ?>
                     </div>
                 

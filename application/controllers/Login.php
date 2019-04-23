@@ -18,7 +18,7 @@
             if ($this->form_validation->run() == TRUE && !empty($checkLogin)) {
                 $dataUser = $this->db->get('user');
                 $this->session->set_userdata($checkLogin);
-                redirect('account');
+                redirect('/');
                 // $this->session->set_flashdata('flash', 'Invalid Email or Password');
             }
             else {
@@ -28,8 +28,9 @@
             // $this->load->view('resources/footer');
         }
         public function logout() {
+            $this->session->sess_destroy();
             $this->session->unset_userdata($checkLogin);
-            redirect('login');
+            redirect('Welcome');
         }
     }
 ?>
