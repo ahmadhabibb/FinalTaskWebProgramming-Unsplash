@@ -93,5 +93,9 @@
             $this->db->where('id', $id);
             return $this->db->update('user', $data);
         }
+        public function searchPhoto($keyword) {
+            $this->db->where('keyword', $keyword);
+            return $this->db->get('photo')->result_array();
+        }
     }
 ?>

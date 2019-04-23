@@ -15,15 +15,14 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/stylehome.css">
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
 </head>
-
-
 <body>
 <!-- -------------------------------------------------------------BAG 1--------------------------------------------------------------------------- -->
-<div class="container">
+	<div class="container">
         <div class="row">
             <div class="col-md-12 fixed-top" style="display: -webkit-inline-box; padding-top: 10px; background-color: white;">
                 <a href="<?php echo base_url();?>Welcome"><img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/></a>
                 <div class="col-lg-8">
+				<form action="search" method="POST">
                     <input type="text" placeholder="Search free high-resolution photos" class="form-control" name="search"
                     style=" padding-left:30px; 
                             margin: 0; 
@@ -33,7 +32,8 @@
                             border-radius:25px;
                             font-size: 14px;
                             height: 40px;
-                            width: 1270px;">
+							width: 1270px;">
+				</form>
                 </div>
                 <div class="col-sm-2" style="margin:0; padding:0; max-width: 270px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">

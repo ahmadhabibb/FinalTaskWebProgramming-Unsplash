@@ -50,4 +50,11 @@ class welcome extends CI_Controller {
 			$this->load->view('index_login', $data);
 		}
 	}
+	public function search() {
+		$keyword = $this->input->post('search', true);
+		$searchPhoto = $this->User->searchPhoto($keyword);
+		$data['result'] = $searchPhoto;
+
+		$this->load->view('searach/index', $data);
+	}
 }

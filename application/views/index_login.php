@@ -21,6 +21,8 @@
             <div class="col-md-12 fixed-top" style="display: -webkit-inline-box; padding-top: 10px; background-color: white;">
                     <a href="<?php echo base_url();?>Welcome"><img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/></a>
                 <div class="col-lg-8">
+					<!-- <i class="far fa-search"></i> -->
+				<form action="search" method="POST">	
                     <input type="text" placeholder="Search free high-resolution photos" class="form-control" name="search"
                     style=" padding-left:30px; 
                             margin: 0; 
@@ -31,7 +33,8 @@
                             font-size: 14px;
                             height: 40px;
                             width: 1270px;">
-                </div>
+				</div>
+				</form>
                 <div class="col-sm-2" style="margin:0; padding:0; max-width: 350px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">
                         <li><a href="<?php echo base_url();?>Welcome">Home</a></li>
@@ -154,7 +157,7 @@
 													<span class="_3cUBZ _2iX7Z">Search</span>
 												</button>
 												<div class="_2ZbDJ">
-													<input type="search" name="searchKeyword" placeholder="Search free high-resolution photos" required="" class="zbIrd _3FYu1" data-test="homepage-header-search-form-input" id="SEARCH_FORM_INPUT_homepage-header-small" title="Search Unsplash" autocapitalize="none" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" autocomplete="off" value="">
+													<input type="search" name="search" placeholder="Search free high-resolution photos" required="" class="zbIrd _3FYu1" data-test="homepage-header-search-form-input" id="SEARCH_FORM_INPUT_homepage-header-small" title="Search Unsplash" autocapitalize="none" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" autocomplete="off" value="">
 												</div>
 											</form>
 										</div>
