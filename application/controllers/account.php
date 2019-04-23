@@ -6,6 +6,7 @@
             // $this->load->model('uploadPhoto', 'upl');
             $this->load->library('form_validation');
             // $this->load->helper('download');
+            $this->load->library('upload');
             $this->load->helper(array('url','download'));
         }
         public function index() {
@@ -34,12 +35,13 @@
                 $data['keyword']                = $this->input->post('keyword');
                 $config['upload_path']          = './assets/photoUser/';
                 $config['allowed_types']        = 'gif|jpg|png';
-                $config['max-size']             = 10240;
-                $config['max-width']            = 10240;
-                $config['max-height']           = 10240;
+                $config['min-size']             = 1024;
+                $config['min-width']            = 1024;
+                $config['min-height']           = 1024;
                 $config['overwrite']			= true;
 
                 $this->load->library('upload', $config);
+                $this->upload->initialize($config);
 
                 if($this->upload->do_upload('image')) {
                     $data = array('upload_data' => $this->upload->data());
@@ -58,6 +60,7 @@
                     $this->User->uploadPhoto($id_user, $file_name);
                     $error = array('error' => $this->upload->display_errors());
                     $this->load->view('account/index', $error);
+                    echo "TESTTXVSHVCJV";
                 }
             }
             else {

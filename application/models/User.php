@@ -14,6 +14,7 @@
         }
         public function addUser() {
             $this->load->database();
+            
             $data = [
                 "first_name" => $this->input->post('first_name', true),
                 "last_name" => $this->input->post('last_name', true),
@@ -44,18 +45,16 @@
             $this->db->where('id', $id);
             return $this->db->get('user')->result_array();
         }
-        // public function getPhotoUserById($id) {
-        //     $this->db->where('id', $id);
-        //     return $this->db->get('photo')->result_array();
-        // }
         public function uploadPhoto($id, $file_name) {
             $this->db->where('id', $id);
             $dataUser = $this->db->get('user')->row_array();
             $data = [
                 "first_name" => $dataUser['first_name'],
                 "last_name" => $dataUser['last_name'],
+                "username" => $dataUser['username'],
                 "photo" => $file_name,
                 "keyword" => $this->input->post('keyword', true),
+                "photoUser" => $dataUser['photo'],
             ];
             return $this->db->insert('photo', $data);
         }

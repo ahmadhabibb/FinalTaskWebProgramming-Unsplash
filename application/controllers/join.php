@@ -4,6 +4,7 @@
             parent::__construct();
             $this->load->model('User');
             $this->load->library('form_validation');
+            // $this->load->library('password');
 	    }
         public function index() {
             // $this->load->view('resources/bootstrap');
