@@ -35,8 +35,8 @@
                 <div class="col-sm-2" style="margin:0; padding:0; max-width: 350px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">
                         <li><a href="<?php echo base_url();?>Welcome">Home</a></li>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Explore</a></li>
+                        <li><a href="<?php base_url(); ?>collection">Collections</a></li>
+                        <li><a href="<?php base_url(); ?>explore">Explore</a></li>
                     </ul>
                     <button class="fas fa-ellipsis-h btn" type="button" data-toggle="dropdown" style="margin-left:10px;"></button>
                     <ul class="dropdown-menu" style="background-color: black;">
