@@ -10,7 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleAccount.css">  -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/css/styleAccount.css"> 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/styleCollection.css">
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
 </head>
@@ -125,6 +125,65 @@
 
 </div>
 </div>
+<!-- ----------------------- MODAL PHOTO ----------------------- -->
+<div class="row">
+	<div class="col-md-2"></div>
+		<div class="col-md-10 col-xl-10">
+    		<?php foreach($allPhoto as $dataPhotoUser) { ?>
+        		<button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="cursor: zoom-in; padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
+    		<?php } ?>
+		</div>	
+	<div class="col-md-2"></div>
+	</div>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Select photos for publishing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <?php echo form_open_multipart('account/upload'); ?>
+                <div class="form_modal_upload">
+                    <div class="form_upload">
+                        <div class="form_modal_">
+                            <label class="user data accounts">
+                                <div class="modal_upload">
+                                    <div class="img_upload" style="width: 150px; height: 93px;">
+                                        <div class="image_upload" style="padding-bottom: 62%;">
+                                            <img style="wi" src="<?php echo base_url(); ?>/assets/img/img-upload.png" class="_2zEKz">
+                                        </div>
+                                    </div>
+                                    <div style="font-family: Helvetica;
+                                                font-size: 16px;
+                                                color: #AAAAAA;
+                                                margin-top: 30px;">
+                                                Drop your photos here or 
+                                        <div class="button style_btn bttn browse" style="background-color: #fff;
+                                                                                                    border-color: #ddd;">Browse</div>
+                                    </div>
+                                </div>
+                                <input type="file" multiple="" accept="image/jpeg" class="input_photo" name="image">
+                                <div class="textBawah" style="font-family: Helvetica; font-size: 12px; color: #AAAAAA;">You have 9 uploads remaining this week.</div>
+                            </label>
+                        </div>
+                        <!-- <form action="" method="POST"> -->
+                            <input type="text" placeholder="Keyword for Photo" class="form-control" name="keyword">
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer" style="justify-content: flex-start;">
+                <a href="#">Read the Unsplash License</a>
+                <button style="margin-left: 180px;" name="publish" type="submit" class="btn btn-primary">Publish Photos</button>
+            </div>
+            </div>
+        </div>
+    </div>
 
 	 
 </body>

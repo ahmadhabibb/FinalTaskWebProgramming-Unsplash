@@ -49,7 +49,7 @@
                         <li><a href="#">Made with Unsplash</a></li>
                         <li><a href="#">API/Developers</a></li>
                         <li><a href="#">Hiring</a></li>
-                        <li><a href="#">Licence</a></li>
+                        <li><a href="<?php base_url(); ?>licence">Licence</a></li>
                         <li><a href="#">Help</a></li>
                     </ul>
                 </div>
