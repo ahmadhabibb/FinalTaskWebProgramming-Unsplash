@@ -11,11 +11,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<<<<<<< HEAD
-    <!-- <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleAccount.css">  -->
-=======
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleAccount.css"> 
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/stylehome.css">
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
 </head>
@@ -41,13 +37,8 @@
                 </div>
                 <div class="col-sm-2" style="margin:0; padding:0; max-width: 270px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">
-<<<<<<< HEAD
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Explore</a></li>
-=======
                         <li><a href="<?php base_url(); ?>collection">Collections</a></li>
                         <li><a href="<?php base_url(); ?>explore">Explore</a></li>
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
                     </ul>
                     <button class="fas fa-ellipsis-h btn" type="button" data-toggle="dropdown" style="margin-left:10px;"></button>
                     <ul class="dropdown-menu" style="background-color: black;">
@@ -72,11 +63,7 @@
         </div>
     </div>
     <!-- -------BAWAHCSS-------- -->
-<<<<<<< HEAD
-	<div class="Unav Unav1 fixed-top" style="margin-top:55px; box-shadow: none; background-color: white;">
-=======
 	<div class="_1EkxQ _8-qoZ fixed-top" style="margin-top:55px; box-shadow: none; background-color: white;">
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
 		<div>
 			<ul class="_2ZZrD">
 				<li class="_3ABqA">
@@ -232,12 +219,6 @@
 			</div>
 		</div>
 <!-- ----------------------------------------------------------------------BAG 3------------------------------------------------------------------------------------------------------- -->
-<<<<<<< HEAD
-<div class="col-md-12">
-    <?php foreach($allPhoto as $dataPhotoUser) { ?>
-        <button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="padding-right: 10px; padding-left:10px; margin-bottom: 20px; cursor: zoom-in;"></button>
-    <?php } ?>
-=======
 <div class="row">
 	<div class="col-md-2"></div>
 		<div class="col-md-10 col-xl-10">
@@ -246,7 +227,6 @@
     		<?php } ?>
 		</div>	
 	<div class="col-md-2"></div>
->>>>>>> baf83476bd7aec30a65cffeb790feb81650e9994
 </div>	
 
 <!-- --------------- MODAL DETAIL PHOTO --------------- -->
