@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Email Settings | Unsplash</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assets/css/cssemail.css">
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/styleAccount.css">  -->
+    
 	<link rel="shortcut icon" href="<?php echo base_url();?>/assets/img/favicon-black.ico">
 </head>
 
 
 <body>
 <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
-		<div class="container">
+		<div class="container-fluid">
         <div class="row">
             <div class="col-md-12 fixed-top" style="display: -webkit-inline-box; padding-top: 10px; background-color: white;">
                     <img class="logo-header" src="<?php echo base_url(); ?>/assets/img/logo-black.svg" alt="logo" style="padding-top:5px;"/>
@@ -40,9 +36,9 @@
                 </div>
                 <div class="col-sm-2" style="margin:0; padding:0; max-width: 350px;">
                     <ul style="padding-left:15px; display: inline-flex;" class="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Explore</a></li>
+                    <li><a href="<?php base_url(); ?>welcome">Home</a></li>
+                        <li><a href="<?php base_url(); ?>collection">Collections</a></li>
+                        <li><a href="<?php base_url(); ?>explore">Explore</a></li>
                     </ul>
                     <button class="fas fa-ellipsis-h btn" type="button" data-toggle="dropdown" style="margin-left:10px;"></button>
                     <ul class="dropdown-menu" style="background-color: black;">
@@ -60,7 +56,7 @@
                     <button style="margin-left:10px;" class="submitPhoto btn btn-light" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Submit a Photo</button>
                     <button style="margin-left:10px;" class="fas fa-bell btn" style="color: #ADADAD;"></button>
                     <?php foreach($userPhoto as $photo) { ?>
-                        <a href="#"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="40px" style="border-radius:25px;"></a>
+                        <a href="<?php echo base_url();?>account"><img src="<?php echo base_url('assets/photoProfile/') . $photo['photo']; ?>" width="40px" style="border-radius:25px;"></a>
                     <?php } ?>
                 </div>
             </div>
@@ -74,7 +70,7 @@
 		        		<div class="col-xs-12 col-sm-4 col-md-3" style="margin-top: 100px;">
                     		<ul id="menu">
                         		<h4>Account Settings</h4>
-                        			    <li><a href="#">Edit Profile</li>
+                        			    <li><a href="<?php echo base_url(); ?>edit">Edit Profile</li>
                         				<li><a href="#">Manage Photos</a></li>
                         				<li class="active"><a href="#">Email Settings</a></li>
                         				<li><a href="#">Change Password</a></li>

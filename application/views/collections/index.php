@@ -80,24 +80,38 @@
 <div class="kolomgambar">
 
  <div class="gcoll">
- 	<?php foreach ($foto as $f) { ?>
+ 	<?php foreach ($tag as $t) { 
+			foreach ($foto as $f) {
+				$benar = 'true';
+ 				$besar = 'true';
+ 				$kecil1 = 'true';
+ 				$kecil2 = 'true';
+ 	?>
+   <?php if (($t['keyword'] == $f['keyword'])){ 
+ 				$besar = 'false'; ?>
  	<div class="gcoll2">
  		<div class="gcoll3">
  			<div class="gcoll4">
- 				<a href="#" class="gcoll5">
+ 				<a href="" class="gcoll5">
  					<div class="gcoll6">
  						<!-- gambar besar -->
  						<div class="gbrcoll">
- 							<img class="gbrcoll2" src="<?= base_url('assets/photoUser/') . $f['photo']?>" style="">
+ 							<img class="gbrcoll2" src="<?php echo base_url('assets/photoUser/') . $f['photo']; ?>" style="">
  						</div>
  						<!-- end gambar besar -->
+ 						<?php if (($t['keyword'] == $f['keyword']) and ($besar !== $benar) and ($kecil1 == $benar)){ 
+ 							$kecil1 = 'false'; ?>
  						<div class="gbkcoll">
  							<div class="gbkcoll2">
- 								<img src="78161.jpg" class="gbk">
+ 								<img src="<?php echo base_url('assets/photoUser/') . $f['photo']; ?>" class="gbk">
  							</div>
+ 						<?php } ?>
+ 						<?php if (($t['keyword'] == $f['keyword']) and ($besar !== $benar) and ($kecil1 !== $benar) and ($kecil2 == $benar)){ 
+ 							$kecil2 = 'false'; ?>
  							<div class="gbkcoll2">
- 								<img src="78161.jpg" class="gbk">
+ 								<img src="<?php echo base_url('assets/photoUser/') . $f['photo']; ?>" class="gbk">
  							</div>
+ 						<?php }?>
  							<!-- end gambar kecil -->
  						</div>
  					</div>
@@ -105,7 +119,7 @@
  					<!-- mulai judul -->
  					<div class="jgbr" >
  						<div class="jgbr2">
- 							<?= $f['keyword']?>
+ 							<?= $f['keyword'];?>
  						</div>
  						<!-- end judul -->
  					</div>
@@ -115,7 +129,12 @@
  		</div>
  		
  	</div>
- 	<?php }?>
+ <?php }?>
+ 	<?php 
+ 		}
+ 	 	}
+ 	?>
+ 	
  </div>
 
 </div>

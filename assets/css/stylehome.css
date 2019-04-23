@@ -2765,7 +2765,7 @@
     position:relative
    }
    ._2zEKz {
-    position:absolute;
+    /* position:absolute; */
     width:100%;
     height:100%;
     left:0
@@ -3793,7 +3793,7 @@
     text-decoration:none
    }
    ._114h2 {
-    background-color:#000;
+    background-image: url('../photoUser/glass_neon_light_117456_1920x1080.jpg');
     color:#fff;
     margin-bottom:48px
    }

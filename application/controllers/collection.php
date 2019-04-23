@@ -15,6 +15,8 @@
 		    $photo = $this->User->getPhotoById($id);
 		    $data['userPhoto'] = $photo;
 		    $allPhoto = $this->User->getAllPhotos();
+
+            $data['tag'] = $this->User->getKeyword();
             $data['foto'] = $this->User->getAllPhotos();
 
             if ($data['user'] == NULL) {

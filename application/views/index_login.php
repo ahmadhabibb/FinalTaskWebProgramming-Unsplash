@@ -205,7 +205,7 @@
 						<div class="BcmU7">
 							<div class="jGus2 -wAV0 _36V_V">
 								<a title="View the photo by eberhard grossgasteiger" class="_2Mc8_ ICezk" href="/photos/YL-wHZmvcLs">Photo of the Day</a>
-								&nbsp;by&nbsp;
+								&nbsp;by Ahmad Habib Fitriansyah&nbsp;
 								<div class="_2tX2R">
 									<a class="ICezk" href=""></a>
 								</div>
@@ -248,7 +248,7 @@
                                 <div class="modal_upload">
                                     <div class="img_upload" style="width: 150px; height: 93px;">
                                         <div class="image_upload" style="padding-bottom: 62%;">
-                                            <img src="<?php echo base_url(); ?>/assets/img/img-upload.png" class="_2zEKz">
+                                            <img style="wi" src="<?php echo base_url(); ?>/assets/img/img-upload.png" class="_2zEKz">
                                         </div>
                                     </div>
                                     <div style="font-family: Helvetica;
@@ -292,7 +292,7 @@
                     <div class="coba">
                         <h5 style="font-size:15px; font-family: Helvetica; margin-bottom: -10px;"  class="modal-title" id="exampleModalCenterTitle"><?php echo $dataPhotoUser['first_name'] ?> <?php echo $dataPhotoUser['last_name'] ?></h5>
 
-                        <span style="font-size:11px; font-family: Helvetica;">@<?php echo $user['username'];?></span>
+                        
 
                         <span style="font-size:11px; font-family: Helvetica;">@<?php echo $dataPhotoUser['username'];?></span>
                     </div>

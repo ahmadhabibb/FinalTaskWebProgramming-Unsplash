@@ -85,20 +85,23 @@
  	<div class="gcoll2">
  		<div class="gcoll3">
  			<div class="gcoll4">
- 				<a href="#" class="gcoll5">
+ 				<a href="" class="gcoll5">
  					<div class="gcoll6">
+                        
  						<!-- gambar besar -->
  						<div class="gbrcoll">
- 							<img class="gbrcoll2" src="<?= base_url('assets/photoUser/') . $f['photo']?>" style="">
- 						</div>
+ 							<img class="gbrcoll2" src="<?php echo base_url('assets/photoUser/') . $f['photo']; ?>" style="">
+                         </div>
  						<!-- end gambar besar -->
  						<div class="gbkcoll">
  							<div class="gbkcoll2">
- 								<img src="78161.jpg" class="gbk">
+ 								<img src="<?php echo base_url('assets/photoUser/') . $f['photo']; ?>" class="gbk">
  							</div>
+
  							<div class="gbkcoll2">
- 								<img src="78161.jpg" class="gbk">
+ 								<img src="<?php echo base_url('assets/photoUser/') . $f['photo']; ?>" class="gbk">
  							</div>
+
  							<!-- end gambar kecil -->
  						</div>
  					</div>
@@ -106,7 +109,7 @@
  					<!-- mulai judul -->
  					<div class="jgbr" >
  						<div class="jgbr2">
- 							<?= $f['keyword']?>
+ 							<?= $f['keyword'];?>
  						</div>
  						<!-- end judul -->
  					</div>
@@ -116,7 +119,8 @@
  		</div>
  		
  	</div>
- 	<?php }?>
+ <?php }?>
+ 	
  </div>
 
 </div>

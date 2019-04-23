@@ -12,7 +12,7 @@
                 return FALSE;
             }
         }
-        public function addUser($password) {
+        public function addUser() {
             $this->load->database();
             
             $data = [
@@ -20,7 +20,7 @@
                 "last_name" => $this->input->post('last_name', true),
                 "email" => $this->input->post('email', true),
                 "username" => $this->input->post('username', true),
-                "password" => $password,
+                "password" => $this->input->post('password', true),
                 "photo" => 'default.jpg'
             ];
             return $this->db->insert('user', $data);
@@ -58,6 +58,14 @@
             ];
             return $this->db->insert('photo', $data);
         }
+        public function getKeyword(){
+            $this->db->select('keyword');
+            return $this->db->get('photo')->result_array();
+        }
+        public function getPhotoByKeyword($keyword){
+            $this->db->where('keyword',$keyword);
+            return $this->db->get('photo')->result_array();
+        }
         public function updateProfile($id, $file_name) {
             $data = [
                 "first_name"             => $this->input->post('first_name', true),
@@ -94,7 +102,7 @@
             return $this->db->update('user', $data);
         }
         public function searchPhoto($keyword) {
-            $this->db->where('keyword', $keyword);
+            $this->db->like('keyword', $keyword);
             return $this->db->get('photo')->result_array();
         }
     }

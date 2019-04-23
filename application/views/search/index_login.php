@@ -86,6 +86,59 @@
         <div class="col-md-2"></div>
     </div>
 </div>
+
+<!-- ------------------- MODAL UPLOAD ------------------- -->
+
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Select photos for publishing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <?php echo form_open_multipart('account/upload'); ?>
+                <div class="form_modal_upload">
+                    <div class="form_upload">
+                        <div class="form_modal_">
+                            <label class="user data accounts">
+                                <div class="modal_upload">
+                                    <div class="img_upload" style="width: 150px; height: 93px;">
+                                        <div class="image_upload" style="padding-bottom: 62%;">
+                                            <img src="<?php echo base_url(); ?>/assets/img/img-upload.png" class="_2zEKz">
+                                        </div>
+                                    </div>
+                                    <div style="font-family: Helvetica;
+                                                font-size: 16px;
+                                                color: #AAAAAA;
+                                                margin-top: 30px;">
+                                                Drop your photos here or 
+                                        <div class="button style_btn bttn browse" style="background-color: #fff;
+                                                                                                    border-color: #ddd;">Browse</div>
+                                    </div>
+                                </div>
+                                <input type="file" multiple="" accept="image/jpeg" class="input_photo" name="image">
+                                <div class="textBawah" style="font-family: Helvetica; font-size: 12px; color: #AAAAAA;">You have 9 uploads remaining this week.</div>
+                            </label>
+                        </div>
+                        <!-- <form action="" method="POST"> -->
+                            <input type="text" placeholder="Keyword for Photo" class="form-control" name="keyword">
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer" style="justify-content: flex-start;">
+                <a href="#">Read the Unsplash License</a>
+                <button style="margin-left: 180px;" name="publish" type="submit" class="btn btn-primary">Publish Photos</button>
+            </div>
+            </div>
+        </div>
+    </div>
 <!-- --------------- MODAL DETAIL PHOTO --------------- -->
 <!-- Modal -->
 <?php foreach($result as $dataPhotoUser) { ?>
