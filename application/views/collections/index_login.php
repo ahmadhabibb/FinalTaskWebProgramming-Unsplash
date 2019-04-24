@@ -126,16 +126,6 @@
 </div>
 </div>
 <!-- ----------------------- MODAL PHOTO ----------------------- -->
-<div class="row">
-	<div class="col-md-2"></div>
-		<div class="col-md-10 col-xl-10">
-    		<?php foreach($allPhoto as $dataPhotoUser) { ?>
-        		<button type="button" name="photoUser" class="btn" style="padding: 0; margin: 0;" data-toggle="modal" data-target="#modal<?php echo $dataPhotoUser['id_photo'];?>"><img src="<?php echo base_url('assets/photoUser/') . $dataPhotoUser['photo'];?>" alt="photoUser" width="400" heigth="277" style="cursor: zoom-in; padding-right: 10px; padding-left:10px; margin-bottom: 20px;"></button>
-    		<?php } ?>
-		</div>	
-	<div class="col-md-2"></div>
-	</div>
-</div>
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">

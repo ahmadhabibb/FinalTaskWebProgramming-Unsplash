@@ -29,9 +29,9 @@
         }
         public function upload() {
             $this->form_validation->set_rules('keyword', 'Keyword', 'required');
-            $upload = $_FILES['image'];
+            
 
-            if($upload) {
+            
                 $data['keyword']                = $this->input->post('keyword');
                 $config['upload_path']          = './assets/photoUser/';
                 $config['allowed_types']        = 'gif|jpg|png';
@@ -63,9 +63,7 @@
                     echo "TESTTXVSHVCJV";
                 }
             }
-            else {
-                $this->load->view('join');
-            }
+            
         }
-    }
+    
 ?>

@@ -23,3 +23,13 @@ class emails extends CI_Controller {
       }
 }
 ?>
+
+<!-- $this->load->database;
+$data['user'] = $this->db-.get_where('user',['email => $this->session->userdata('email')])->row_array()
+$first_name = $data['user']['first_name'];
+$photo = $this->user->getphotobtname('$first_name');
+$data['data_photo'] = $photo;
+$id = $data['user']['id'];
+$photo = $this->user->getphotoid($id);
+$data['userphoto'] = $photo
+$this->load->view('emails/index',$data) -->
