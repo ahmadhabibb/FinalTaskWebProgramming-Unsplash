@@ -156,7 +156,9 @@
 													<span class="_3cUBZ _2iX7Z">Search</span>
 												</button>
 												<div class="_2ZbDJ">
-													<input type="search" name="searchKeyword" placeholder="Search free high-resolution photos" required="" class="zbIrd _3FYu1" data-test="homepage-header-search-form-input" id="SEARCH_FORM_INPUT_homepage-header-small" title="Search Unsplash" autocapitalize="none" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" autocomplete="off" value="">
+													<form action="search" method="POST">
+														<input type="text" name="search" placeholder="Search free high-resolution photos" class="zbIrd _3FYu1">
+													</form>
 												</div>
 											</form>
 										</div>
@@ -169,7 +171,9 @@
 													<span class="_3cUBZ _2iX7Z">Search</span>
 												</button>
 												<div class="_2ZbDJ">
-													<input type="search" name="searchKeyword" placeholder="Search free high-resolution photos" required="" class="zbIrd _3FYu1" data-test="homepage-header-search-form-input" id="SEARCH_FORM_INPUT_homepage-header-big" title="Search Unsplash" autocapitalize="none" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" autocomplete="off" value="">
+													<form action="search" method="POST">
+														<input type="text" name="search" placeholder="Search free high-resolution photos" class="zbIrd _3FYu1">
+													</form>
 												</div>
 											</form>
 										</div>
@@ -204,7 +208,7 @@
 						<div class="BcmU7">
 							<div class="jGus2 -wAV0 _36V_V">
 								<a title="View the photo by eberhard grossgasteiger" class="_2Mc8_ ICezk" href="/photos/YL-wHZmvcLs">Photo of the Day</a>
-								&nbsp;by&nbsp;
+								&nbsp;by Ahmad Habib Fitriansyah&nbsp;
 								<div class="_2tX2R">
 									<a class="ICezk" href=""></a>
 								</div>
